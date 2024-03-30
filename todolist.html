@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script defer src="./assets/js/script.js"></script>
+    <title>To do list</title>
+</head>
+<body>
+    <div class="divContainer">
+        <div class="box">
+            <h1>To do List</h1>
+            <hr>
+        </div>
+        <div class="box input">    
+            <h3>Nueva tarea</h3>
+            <input id="inputTareas" type="text">
+            <button id="btnIngresoTarea">Agregar</button>
+        </div>
+        <div class="box displayFlex">
+            <div>
+                <p id="totalTareas"></p>
+                <p id="tareasRealizadas">Realizadas: </p>
+            </div>
+            <div class="box">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Tarea</th>
+                            <th>Checkbox</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody id="agregarDatosTabla">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script>
+        const inputTareas = document.querySelector("#inputTareas")
+const btnIngresoTarea = document.querySelector("#btnIngresoTarea")
+const agregarDatosTabla = document.querySelector("#agregarDatosTabla")
+const totalTareas = document.querySelector("#totalTareas")
+const tareasRealizadas = document.querySelector("#tareasRealizadas")
+
+const tareas = []
+
+function renderTareas(){
+    for(let tarea of tareas) {
+        const template = `
+        <tr>
+            <td>${tarea.id}</td>
+            <td>${tarea.nombre}</td>
+            <td><input type="checkbox" ${tarea.checkbox ? 'checked' : ''}></td>
+            <td>${tarea.estado ? 'Realizada' : 'Pendiente'}</td>
+        </tr>
+        `;
+        agregarDatosTabla.innerHTML += template;
+    }
+}
+
+btnIngresoTarea.addEventListener("click", () => {
+    const nombreTarea = inputTareas.value
+    tareas.push({id: Date.now(), nombre: nombreTarea, checkbox: false, estado: false})
+    inputTareas.value = ""
+    renderTareas()
+
+    totalTareas.textContent = `Total tareas: ${tareas.length}`
+    console.log(tareas)
+})
+    </script>  -->
+
+</body>
+</html>
